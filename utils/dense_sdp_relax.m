@@ -99,6 +99,8 @@ m_h                 = dim_h; % number of constraints due to equality
 m_g                 = sum( triangle_number(n1s) );
 m                   = m_mom + m_h + m_g + 1;
 
+SDP.m_mom = m_mom;
+
 fprintf('SDP | blknum: %d, moment mat: %d, m: %d, m_mom: %d, m_h: %d, m_g: %d.\n',...
     length(n1s)+1,n,m_mom+m_h+m_g+1,m_mom,m_h,m_g);
 
